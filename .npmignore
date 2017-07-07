@@ -63,8 +63,15 @@ typings/
 .idea
 .DS_Store
 
-# Production
-dist
-build
-browser/*.js
-browser/*.map
+# Develop only
+browser
+conf
+test
+/.editorconfig
+/.eslintignore
+/.eslintrc.yml
+/.yarnclean
+/*.config.js
+/bs-config.js
+/LICENSE
+/yarn.lock
