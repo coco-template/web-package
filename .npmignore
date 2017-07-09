@@ -75,3 +75,7 @@ test
 /bs-config.js
 /LICENSE
 /yarn.lock
+
+# Compilation
+src/*.js
+src/*.map

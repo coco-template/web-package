@@ -1,13 +1,18 @@
 {
   "compilerOptions": {
+    "declaration": false,
     "module": "es2015",
-    "target": "esnext",
-    "sourceMap": true
+    "target": "es2016",
+    "sourceMap": true,
+    "noEmitOnError": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
   },
   "exclude": [
     "node_modules"
   ],
   "include": [
-    "src"
+    "src/**/*.ts"
   ]
 }
