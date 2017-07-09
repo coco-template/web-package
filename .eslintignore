@@ -40,7 +40,6 @@ jspm_packages
 
 # Test
 __fixture__
-__tests__
 
 # Compilation
 src

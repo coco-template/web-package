@@ -4,8 +4,8 @@
  */
 
 const Mappings = {
-  zgyd: '中国移动',
-  zglt: '中国联通'
+  zglt: '中国联通',
+  zgyd: '中国移动'
 };
 
 /**
