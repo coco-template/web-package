@@ -6,6 +6,7 @@
 'use strict';
 
 const resolve = require('rollup-plugin-node-resolve');
+const babel = require('rollup-plugin-babel');
 const Meta = require('./package.json');
 const ExternalList = [...Reflect.ownKeys(Meta.dependencies), ...Reflect.ownKeys(Meta.devDependencies)];
 
@@ -13,6 +14,10 @@ module.exports = {
   entry: Meta.module,
   plugins: [
     resolve(),
+    babel({
+      exclude: ['**/*.css', '**/*.scss'],
+      runtimeHelpers: true
+    })
   ],
   external: (id) => {
     return ExternalList.some((name) => id.startsWith(name));

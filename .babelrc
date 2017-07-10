@@ -10,6 +10,11 @@
     "stage-3"
   ],
   "env": {
+    "prod": {
+      "plugins": [
+        "transform-runtime"
+      ]
+    },
     "test": {
       "plugins": [
         "transform-es2015-modules-commonjs"
