@@ -2,10 +2,15 @@
   "name": "typescript-lib-starter",
   "version": "0.1.0",
   "description": "typescript lib.",
-  "main": "src/index.js",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "jsnext:main": "esm/index.js",
+  "typings": "esm/index.d.ts",
   "scripts": {
     "test": "jest -c jest.config.js --coverage",
-    "test:watch": "jest -c jest.config.js --watch"
+    "test:watch": "jest -c jest.config.js --watch",
+    "compile:cjs": "tsc --module commonjs --target es5 --outDir lib",
+    "compile:esm": "tsc --declaration"
   },
   "repository": {
     "type": "git",

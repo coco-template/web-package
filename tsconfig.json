@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "declaration": false,
-    "module": "es2015",
+    "module": "es6",
     "target": "es2016",
+    "outDir": "es",
     "sourceMap": true,
     "noEmitOnError": true,
     "typeRoots": [
