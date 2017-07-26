@@ -12,12 +12,17 @@
   "env": {
     "prod": {
       "plugins": [
-        "transform-runtime",
-        "transform-es2015-modules-commonjs"
+        "transform-runtime"
       ]
     },
     "test": {
       "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
+    },
+    "degrade": {
+      "plugins": [
+        "transform-runtime",
         "transform-es2015-modules-commonjs"
       ]
     }

@@ -42,5 +42,9 @@ jspm_packages
 __fixture__
 
 # Compilation
-src
+/es
+/lib
+/bundle
+*.ts
+*.map
 
