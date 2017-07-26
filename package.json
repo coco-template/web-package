@@ -20,9 +20,9 @@
     "clean:cjs": "rm -rf lib",
     "clean:esm": "rm -rf es",
     "clean:bundle": "rm -rf bundle",
-    "compile": "npm-run-all -s compile:cjs compile:esm compile:bundle",
-    "compile:cjs": "tsc --module commonjs --target es5 --outDir lib",
-    "compile:esm": "tsc --declaration",
+    "compile": "npm-run-all -s compile:esm compile:cjs compile:bundle",
+    "compile:cjs": "NODE_ENV=prod babel es --out-dir lib --source-maps",
+    "compile:esm": "tsc --declaration --sourceMap false",
     "compile:bundle": "NODE_ENV=prod rollup -c rollup.config.js",
     "lint": "npm-run-all -p lint:*",
     "lint:source": "tslint --fix src/**/*.ts",
@@ -46,6 +46,7 @@
     "@types/jest": "^20.0.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.0",

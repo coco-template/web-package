@@ -2,7 +2,7 @@
   "compilerOptions": {
     "declaration": false,
     "module": "es6",
-    "target": "es2016",
+    "target": "ESNext",
     "outDir": "es",
     "sourceMap": true,
     "noEmitOnError": true,
