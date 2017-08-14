@@ -1,10 +1,10 @@
 module.exports = {
   '*.ts': [
-    'lint:source',
+    'tslint --fix',
     'git add'
   ],
   '*.js': [
-    'lint:test',
+    'eslint --fix',
     'git add'
   ]
 };
