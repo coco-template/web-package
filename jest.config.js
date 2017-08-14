@@ -9,7 +9,7 @@ module.exports = {
     '\\.(css|less|scss)$': 'identity-obj-proxy'
   },
   // Coverage report
-  collectCoverageFrom: ['src/**/*.ts', '!src/index.ts'],
+  collectCoverageFrom: ['src/**/*.ts', '!src/**/*.d.ts'],
   coverageDirectory: 'coverage',
   coverageReporters: ['lcov', 'html'],
   mapCoverage: true,

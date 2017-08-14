@@ -17,6 +17,13 @@ export function translateOperatorSymbol(symbol: string): string {
   return Mappings[symbol];
 }
 
-export const arrow = (keyword) => {
-  return `Let's search keyword!!!`;
+/**
+ * @description - just test tsc compile result
+ *
+ * @param {string} keyword
+ *
+ * @return {string}
+ */
+export const arrow = (keyword: string): string => {
+  return `Let's search ${keyword}!!!`;
 };
