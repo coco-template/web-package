@@ -9,6 +9,10 @@
     ],
     "stage-3"
   ],
+  "plugins": [
+    "transform-inline-environment-variables",
+    "transform-class-properties"
+  ],
   "env": {
     "prod": {
       "plugins": [
@@ -17,12 +21,6 @@
     },
     "test": {
       "plugins": [
-        "transform-es2015-modules-commonjs"
-      ]
-    },
-    "degrade": {
-      "plugins": [
-        "transform-runtime",
         "transform-es2015-modules-commonjs"
       ]
     }
