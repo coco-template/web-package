@@ -14,7 +14,7 @@
     "transform-class-properties"
   ],
   "env": {
-    "prod": {
+    "production": {
       "plugins": [
         "transform-runtime"
       ]

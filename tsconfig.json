@@ -3,7 +3,6 @@
     "declaration": false,
     "module": "es6",
     "target": "ESNext",
-    "outDir": "es",
     "sourceMap": true,
     "noEmitOnError": true,
     "moduleResolution": "node",

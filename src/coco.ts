@@ -16,3 +16,7 @@ const Mappings = {
 export function translateOperatorSymbol(symbol: string): string {
   return Mappings[symbol];
 }
+
+export const arrow = (keyword) => {
+  return `Let's search keyword!!!`;
+};

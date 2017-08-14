@@ -70,6 +70,7 @@ build
 # Compilation
 src/*.js
 src/*.map
+src/*.d.ts
 /lib
 /es
 /bundle
