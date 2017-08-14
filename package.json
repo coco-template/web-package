@@ -21,8 +21,8 @@
     "bundle": "coco bundle ./src/index.js --disable-eslint",
     "compile": "npm-run-all -s compile:esm compile:esn compile:es5",
     "compile:esm": "tsc --declaration --sourceMap false",
-    "compile:esn": "NODE_ENV=prod babel src --out-dir es",
-    "compile:es5": "NODE_ENV=prod babel src --out-dir lib --plugins=transform-es2015-modules-commonjs",
+    "compile:esn": "NODE_ENV=production babel src --out-dir es",
+    "compile:es5": "NODE_ENV=production babel src --out-dir lib --plugins=transform-es2015-modules-commonjs",
     "test": "jest -c jest.config.js --coverage",
     "test:karma": "NODE_ENV=karma karma start karma.config.js --single-run",
     "test:jest": "jest -c jest.config.js --watch",
@@ -44,14 +44,11 @@
     "url": "https://github.com/bornkiller/typescript-lib-starter/issues"
   },
   "homepage": "https://github.com/bornkiller/typescript-lib-starter#readme",
-  "dependencies": {
-    "@types/jest": "^20.0.2",
-    "eslint-config-airbnb-base": "^11.3.1",
-    "eslint-plugin-import": "^2.7.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@coco/cli": "^0.3.3",
     "@coco/webpack": "^0.3.0",
+    "@types/jest": "^20.0.6",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
@@ -62,6 +59,8 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-3": "^6.24.1",
     "eslint": "^4.2.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
     "husky": "^0.14.3",
     "jest": "^20.0.4",
     "karma": "^1.7.0",
