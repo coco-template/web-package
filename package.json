@@ -43,12 +43,15 @@
   },
   "homepage": "https://github.com/bornkiller/typescript-lib-starter#readme",
   "dependencies": {
-    "@types/jest": "^20.0.2"
+    "@types/jest": "^20.0.2",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0"
   },
   "devDependencies": {
     "awesome-typescript-loader": "^3.2.1",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
     "babel-plugin-transform-inline-environment-variables": "^0.1.1",

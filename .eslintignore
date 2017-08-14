@@ -41,6 +41,11 @@ jspm_packages
 # Test
 __fixture__
 
+# IDE / OS
+.idea
+.DS_Store
+.vscode
+
 # Compilation
 /es
 /lib
