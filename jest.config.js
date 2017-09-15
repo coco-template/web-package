@@ -8,8 +8,8 @@ module.exports = {
   moduleNameMapper: {
     '\\.(css|less|scss)$': 'identity-obj-proxy'
   },
-  // Coverage report
-  collectCoverageFrom: ['src/**/*.ts', '!src/**/*.d.ts'],
+  // Coverage report, exclude develop bootstrap entry
+  collectCoverageFrom: ['src/**/*.ts', '!src/main.ts', '!src/**/*.d.ts'],
   coverageDirectory: 'coverage',
   coverageReporters: ['lcov', 'html'],
   mapCoverage: true,

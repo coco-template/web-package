@@ -2,9 +2,9 @@
  * @description - coco library test suits
  */
 
-import { translateOperatorSymbol, arrow } from '../src/';
+import { arrow, translateOperatorSymbol } from '../src/coco';
 
-describe('coco typescript lib', () => {
+describe('coco library', () => {
   it('should translate simple symbol', () => {
     expect(translateOperatorSymbol('zgyd')).toEqual('中国移动');
   });
