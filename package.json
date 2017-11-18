@@ -45,8 +45,8 @@
   "homepage": "https://github.com/bornkiller/typescript-lib-starter#readme",
   "dependencies": {},
   "devDependencies": {
-    "@coco/cli": "^0.3.16",
-    "@coco/webpack": "^0.3.0",
+    "@coco-platform/cli": "^0.3.16",
+    "@coco-platform/webpack": "^0.3.0",
     "@types/jest": "^20.0.6",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
