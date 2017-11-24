@@ -3,7 +3,7 @@
  * @author - bornkiller <hjj491229492@hotmail.com>
  */
 
-import { translateOperatorSymbol } from './';
+import { translateOperatorSymbol } from '../src';
 
 /* tslint:disable:no-console */
 console.log(translateOperatorSymbol('zglt'));
