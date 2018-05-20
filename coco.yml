@@ -8,11 +8,6 @@ meta:
     key: package
     type: input
     message: "what's the package name"
-  - name: plugin
-    key: plugin
-    type: input
-    format: Pascal
-    message: "what's the plugin name"
   - name: author
     key: author
     type: input
