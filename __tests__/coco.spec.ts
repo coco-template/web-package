@@ -2,9 +2,9 @@
  * @description - coco library test suits
  */
 
-import { arrow, translateOperatorSymbol } from '../src/coco';
+import { arrow, translateOperatorSymbol } from '../src';
 
-describe('coco library', () => {
+describe('web package', () => {
   it('should translate simple symbol', () => {
     expect(translateOperatorSymbol('zgyd')).toEqual('中国移动');
   });

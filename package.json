@@ -6,67 +6,52 @@
   "main": "bundle/tsc-lib.common.js",
   "jsnext:main": "bundle/tsc-lib.esm.js",
   "typings": "native/index.d.ts",
-  "files": [
-    "es",
-    "lib",
-    "bundle",
-    "native"
-  ],
+  "files": ["es", "lib", "bundle", "native"],
   "scripts": {
-    "prepublish": "npm-run-all -s clean compile bundle",
-    "precommit": "lint-staged",
-    "clean": "rm -rf bundle es lib",
-    "dev": "coco-server --bootstrap ./public/main.ts",
-    "build": "coco-build --bootstrap ./public/main.ts",
-    "bundle": "coco-bundle ./native/index.js --disable-eslint",
-    "compile": "npm-run-all -s compile:esnative compile:esm compile:es5",
-    "compile:esnative": "tsc --declaration --sourceMap false --outDir native",
-    "compile:esm": "NODE_ENV=production babel src --out-dir es",
-    "compile:es5": "NODE_ENV=production babel src --out-dir lib --plugins=transform-es2015-modules-commonjs",
+    "prepublish": "npm-run-all -s clean compile:*",
+    "precommit": "pretty-quick --staged",
+    "dev": "webpack-serve",
+    "clean": "rm -rf es lib",
+    "compile:esn": "tsc --declaration --outDir es",
     "test": "jest -c jest.config.js --coverage",
-    "test:watch": "jest -c jest.config.js --watch",
-    "lint": "npm-run-all -p lint:*",
-    "lint:source": "tslint --fix src/**/*.ts",
-    "lint:test": "eslint --fix __tests__/**/*.js"
+    "test:watch": "jest -c jest.config.js --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bornkiller/typescript-lib-starter.git"
+    "url": "git+https://github.com/coco-template/web-package.git"
   },
-  "keywords": [
-    "typescript",
-    "library"
-  ],
+  "keywords": ["typescript", "package"],
   "author": "huang.jian <hjj491229492@hotmail.com>",
+  "contributors": [
+    {
+      "name": "huang.jian",
+      "email": "hjj491229492@hotmail.com"
+    },
+    {
+      "name": "yang.yuncai",
+      "email": "383235388@qq.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bornkiller/typescript-lib-starter/issues"
+    "url": "https://github.com/coco-template/web-package/issues"
   },
-  "homepage": "https://github.com/bornkiller/typescript-lib-starter#readme",
+  "homepage": "https://github.com/coco-template/web-package#readme",
   "dependencies": {},
   "devDependencies": {
-    "@coco-platform/build": "^0.4.2",
-    "@coco-platform/bundle": "^0.4.0",
-    "@coco-platform/server": "^0.4.2",
-    "@types/jest": "^20.0.6",
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-eslint": "^7.2.3",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
-    "babel-plugin-transform-inline-environment-variables": "^0.1.1",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-stage-3": "^6.24.1",
+    "@coco-platform/webpack-preset": "^0.2.1",
+    "@types/jest": "^22.2.3",
     "eslint": "^4.2.0",
-    "eslint-config-airbnb-base": "^11.3.1",
-    "eslint-plugin-import": "^2.7.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
     "husky": "^0.14.3",
-    "jest": "^20.0.4",
-    "lint-staged": "^4.0.1",
+    "jest": "^22.4.4",
     "npm-run-all": "^4.0.2",
-    "tslint": "^5.5.0",
-    "typescript": "^2.4.1",
-    "typescript-babel-jest": "^1.0.4"
+    "prettier": "^1.12.1",
+    "pretty-quick": "^1.5.0",
+    "ts-jest": "^22.4.6",
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.3",
+    "webpack-serve": "^1.0.2"
   }
 }

@@ -1,9 +1,9 @@
 /**
  * @description - browser preview
- * @author - bornkiller <hjj491229492@hotmail.com>
+ * @author - huang.jian <hjj491229492@hotmail.com>
  */
 
-import { translateOperatorSymbol } from '../src';
+import { translateOperatorSymbol } from './';
 
 /* tslint:disable:no-console */
 console.log(translateOperatorSymbol('zglt'));

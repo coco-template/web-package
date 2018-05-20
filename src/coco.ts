@@ -5,7 +5,7 @@
 
 const Mappings = {
   zglt: '中国联通',
-  zgyd: '中国移动'
+  zgyd: '中国移动',
 };
 
 /**
@@ -14,7 +14,7 @@ const Mappings = {
  * @param {string} symbol
  */
 export function translateOperatorSymbol(symbol: string): string {
-  return Mappings[symbol];
+  return Reflect.get(Mappings, symbol);
 }
 
 /**
