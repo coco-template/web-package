@@ -30,4 +30,4 @@ templates:
   - "README.md"
 # never conflict with template above
 ignores:
-  - "__tests__/template.spec.js"
+  - "__tests__/template.spec.ts"
