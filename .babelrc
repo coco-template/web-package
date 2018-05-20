@@ -10,19 +10,7 @@
     "stage-3"
   ],
   "plugins": [
-    "transform-inline-environment-variables",
-    "transform-class-properties"
-  ],
-  "env": {
-    "production": {
-      "plugins": [
-        "transform-runtime"
-      ]
-    },
-    "test": {
-      "plugins": [
-        "transform-es2015-modules-commonjs"
-      ]
-    }
-  }
+    "transform-class-properties",
+    "transform-runtime"
+  ]
 }
