@@ -3,7 +3,11 @@ meta:
   - name: scope
     key: scope
     type: input
-    message: "what's the repo account scope"
+    message: "what's the account name"
+  - name: repo
+    key: package
+    type: input
+    message: "what's the repo name"
   - name: package
     key: package
     type: input

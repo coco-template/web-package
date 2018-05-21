@@ -11,6 +11,7 @@ const coco = path.resolve(process.cwd(), 'coco.yml');
 const { templates } = YAML.load(coco);
 const context = {
   scope: 'coco-template',
+  repo: 'web-package',
   package: 'web-package',
   author: 'huang.jian',
   email: 'hjj491229492@hotmail.com',
