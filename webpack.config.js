@@ -3,11 +3,11 @@
  * @author - huang.jian <hjj491229492@hotmail.com>
  */
 
-const preset = require('@coco-platform/webpack-preset/lib/webpack.development');
+const { development } = require('@coco-platform/webpack-preset');
 
 // scope
 const options = {
   entry: './src/main.ts',
 };
 
-module.exports = preset(options);
+module.exports = development(options);
