@@ -7,7 +7,8 @@ const { development } = require('@coco-platform/webpack-preset');
 
 // scope
 const options = {
-  entry: './src/main.ts',
+  entry: './public/main.ts',
+  typescript: true,
 };
 
 module.exports = development(options);

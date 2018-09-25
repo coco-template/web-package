@@ -1,30 +1,36 @@
 {
   "name": "web-package",
-  "version": "0.2.0",
-  "description": "A lite seed to develop with typescript.",
+  "version": "0.3.0",
+  "description": "A seed to develop web package with typescript.",
   "module": "es/index.js",
   "main": "bundle/index.common.js",
   "typings": "native/index.d.ts",
-  "files": ["es", "lib", "native"],
+  "files": [
+    "es",
+    "lib",
+    "native"
+  ],
   "scripts": {
     "prepublish": "npm-run-all -s clean compile",
     "prepush": "npm test",
     "precommit": "pretty-quick --staged",
-    "dev": "webpack-serve",
+    "dev": "webpack-dev-server",
     "clean": "rm -rf native es lib",
     "compile": "npm-run-all -s compile:*",
     "compile:native": "tsc --declaration --outDir native",
-    "compile:esm": "babel native --source-maps --out-dir es",
-    "compile:es5":
-      "babel native --source-maps --out-dir lib --plugins=transform-es2015-modules-commonjs",
-    "test": "jest -c jest.config.js --coverage",
-    "test:watch": "jest -c jest.config.js --watch"
+    "compile:esm": "babel src --source-maps --out-dir es --extensions '.js,.ts'",
+    "compile:cjs": "babel src --source-maps --out-dir lib --extensions '.js,.ts' --plugins=@babel/plugin-transform-modules-commonjs",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/coco-template/web-package.git"
   },
-  "keywords": ["typescript", "package"],
+  "keywords": [
+    "typescript",
+    "package"
+  ],
   "author": "huang.jian <hjj491229492@hotmail.com>",
   "contributors": [
     {
@@ -41,30 +47,35 @@
     "url": "https://github.com/coco-template/web-package/issues"
   },
   "homepage": "https://github.com/coco-template/web-package#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@babel/runtime-corejs2": "^7.0.0"
+  },
   "devDependencies": {
-    "@coco-platform/webpack-preset": "^0.2.1",
-    "@types/jest": "^22.2.3",
-    "@types/node": "^10.1.2",
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-3": "^6.24.1",
-    "eslint": "^4.2.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.12.0",
-    "handlebars": "^4.0.11",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@coco-platform/webpack-preset": "^1.0.0-2",
+    "@types/jest": "^23.3.2",
+    "@types/node": "^10.11.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "husky": "^0.14.3",
-    "jest": "^22.4.4",
+    "jest": "^23.6.0",
     "npm-run-all": "^4.0.2",
-    "prettier": "^1.12.1",
-    "pretty-quick": "^1.5.0",
-    "ts-jest": "^22.4.6",
-    "tslint": "^5.10.0",
-    "typescript": "^2.8.3",
-    "webpack-serve": "^1.0.2",
-    "yamljs": "^0.3.0"
+    "prettier": "^1.14.3",
+    "pretty-quick": "^1.7.0",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.3",
+    "webpack": "^4.20.0",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.9"
   }
 }

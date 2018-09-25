@@ -13,9 +13,8 @@
     "removeComments": false,
     "preserveConstEnums": true,
     "sourceMap": true,
-    "skipLibCheck": true,
-    "outDir": "lib"
+    "skipLibCheck": true
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "src/main.ts"]
+  "exclude": ["node_modules"]
 }
