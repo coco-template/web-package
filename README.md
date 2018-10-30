@@ -5,7 +5,7 @@
 ![Package Dependency](https://david-dm.org/coco-template/web-package.svg?style=flat)
 ![Package DevDependency](https://david-dm.org/coco-template/web-package/dev-status.svg?style=flat)
 
-A lite seed to develop package with typescript.
+NPM browser compatible package with typescript.
 
 ## Attention
 
