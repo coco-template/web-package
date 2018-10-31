@@ -7,15 +7,6 @@
 
 NPM browser compatible package with typescript.
 
-## Attention
-
-* use typescript for test suits.
-* avoid below code for `babel-plugin-transform-runtime` weired issue:
-
-```typescript
-export * from './src/something';
-```
-
 ## Usage
 
 ```shell
