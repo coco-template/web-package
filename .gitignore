@@ -68,10 +68,6 @@ dist
 build
 
 # Compilation
-/src/**/*.js
-/src/**/*.map
-/src/**/*.d.ts
-/public/*.js
 /lib
 /es
 /bundle
