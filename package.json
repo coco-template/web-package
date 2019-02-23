@@ -61,6 +61,8 @@
     "@coco-platform/webpack-plugin-html-minify": "^0.2.0",
     "@coco-platform/webpack-plugin-inject-external": "^0.7.0",
     "@coco-platform/webpack-preset": "^1.0.0-2",
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
     "@types/jest": "^24.0.6",
     "@types/node": "^11.9.5",
     "autoprefixer": "^9.3.1",
@@ -107,7 +109,8 @@
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged",
-      "pre-push": "npm test"
+      "pre-push": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }
