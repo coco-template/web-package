@@ -11,7 +11,7 @@
     "native"
   ],
   "scripts": {
-    "prepublish": "npm-run-all -s clean compile",
+    "prepublishOnly": "npm-run-all -s clean compile",
     "dev": "NODE_ENV=development webpack-dev-server --hot --inline",
     "clean": "rm -rf native es lib",
     "compile": "npm-run-all -s compile:*",
@@ -87,6 +87,7 @@
     "mini-css-extract-plugin": "^0.6.0",
     "npm-run-all": "^4.0.2",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "post-npm-install": "^1.0.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.14.3",
     "pretty-quick": "^1.7.0",
@@ -110,7 +111,9 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged",
       "pre-push": "npm test",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "post-merge": "post-npm-install",
+      "post-rebase": "post-npm-install"
     }
   }
 }
