@@ -81,7 +81,6 @@
     "husky": "^2.3.0",
     "jest": "^24.1.0",
     "npm-run-all": "^4.0.2",
-    "post-npm-install": "^1.0.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.14.3",
     "pretty-quick": "^1.7.0",
@@ -104,9 +103,7 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged",
       "pre-push": "npm test",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "post-merge": "post-npm-install",
-      "post-rebase": "post-npm-install"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }
