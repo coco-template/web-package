@@ -1,4 +1,4 @@
-# web-package
+# vanillajs
 
 ![Build Status](https://img.shields.io/travis/coco-template/vanillajs/master.svg?style=flat)
 [![Coverage Status](https://coveralls.io/repos/github/coco-template/vanillajs/badge.svg?branch=master)](https://coveralls.io/github/coco-template/vanillajs?branch=master)
