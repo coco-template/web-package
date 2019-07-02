@@ -5,7 +5,7 @@
 ![David](https://img.shields.io/david/coco-template/vanillajs.svg)
 ![David](https://img.shields.io/david/dev/coco-template/vanillajs.svg)
 [![Greenkeeper badge](https://badges.greenkeeper.io/coco-template/vanillajs.svg)](https://greenkeeper.io/)
-[![Known Vulnerabilities](https://snyk.io//test/github/coco-template/vanillajs/badge.svg?targetFile=package.json)](https://snyk.io//test/github/coco-template/reactjs?targetFile=package.json)
+[![Known Vulnerabilities](https://snyk.io//test/github/coco-template/vanillajs/badge.svg?targetFile=package.json)](https://snyk.io//test/github/coco-template/vanillajs?targetFile=package.json)
 
 create NPM, browser compatible package with typescript.
 
