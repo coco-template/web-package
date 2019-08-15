@@ -1,5 +1,5 @@
 {
-  "name": "web-package",
+  "name": "vanillajs",
   "version": "0.2.0",
   "description": "NPM browser compatible package.",
   "module": "es/index.js",
@@ -42,11 +42,11 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/coco-template/web-package/issues"
+    "url": "https://github.com/coco-template/vanillajs/issues"
   },
-  "homepage": "https://github.com/coco-template/web-package#readme",
+  "homepage": "https://github.com/coco-template/vanillajs#readme",
   "dependencies": {
-    "@babel/runtime-corejs2": "^7.0.0"
+    "@babel/runtime-corejs3": "^7.5.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
