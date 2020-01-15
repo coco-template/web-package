@@ -84,7 +84,7 @@
     "postcss-loader": "^3.0.0",
     "prettier": "^1.14.3",
     "pretty-quick": "^2.0.0",
-    "progress-bar-webpack-plugin": "^1.11.0",
+    "progress-bar-webpack-plugin": "^2.1.0",
     "style-loader": "^1.0.0",
     "tslint": "^5.11.0",
     "typescript": "^3.1.4",
