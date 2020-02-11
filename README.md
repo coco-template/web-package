@@ -22,16 +22,87 @@ npm run test;
 npm run compile;
 ```
 
-## Attention
+## Compile
 
-+ tsc compiler compile without `polyfill`, which means `esnext` native
-+ babel compiler compile both `commonjs` and `esm` style
-+ remember to change meta field in the `package.json`
-+ compile script automatically run before publish, no need for manual compile
++ tsc compiler compile without `polyfill`, which means `esnext` native, whose main purpose is type declaration
++ babel compiler output both `commonjs` and `esm` style
++ compile script automatically run before publish
+
+## Rollup Bundler
+
+In specific situation, it's inevitable to bundle code together into `IIFE` file, which can be included by `<script>` tag, polyfill become tricky.
+
+you can choose transfer polyfill duty to end user, just ignore polyfill plugin, config like below:
+
+```javascript
+// packages
+const resolve = require('@rollup/plugin-node-resolve');
+const babel = require('rollup-plugin-babel');
+const { terser } = require('rollup-plugin-terser');
+
+// scope
+module.exports = {
+  input: 'src/index.ts',
+  output: {
+    plugins: [
+      terser({
+        output: {
+          comments: false,
+        },
+      }),
+    ],
+    format: 'iife',
+    name: 'os',
+  },
+  plugins: [
+    resolve({
+      extensions: ['.ts', '.js'],
+    }),
+    babel({
+      exclude: ['node_modules/**'],
+      extensions: ['.ts', '.js'],
+      plugins: [
+        [
+          '@babel/plugin-transform-runtime',
+          {
+            helpers: false,
+            corejs: false,
+          },
+        ],
+      ],
+    }),
+  ],
+};
+```
+
+alternatively, enable `corejs` option and bundle `polyfill` code:
+
+```javascript
+babel({
+  exclude: ['node_modules/**'],
+  extensions: ['.ts', '.js'],
+  plugins: [
+    [
+      '@babel/plugin-transform-runtime',
+      {
+        helpers: false,
+        corejs: 3,
+      },
+    ],
+  ],
+}),
+/* bundle helper and polyfill code */
+commonjs({
+  include: [
+    'node_modules/@babel/runtime-corejs3/**/*.js',
+    'node_modules/core-js-pure/**/*.js',
+  ],
+})
+```
 
 ## Contact
 
-hjj491229492@hotmail.com
+Email: hjj491229492@hotmail.com
 
 ## License
 
