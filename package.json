@@ -15,7 +15,7 @@
     "dev": "NODE_ENV=development webpack-dev-server --hot --inline",
     "clean": "rm -rf native es lib",
     "compile": "npm-run-all -s compile:*",
-    "compile:native": "tsc --declaration --outDir native",
+    "compile:native": "tsc --declaration --emitDeclarationOnly --outDir native",
     "compile:esm": "babel src --source-maps --out-dir es --extensions '.js,.ts'",
     "compile:cjs": "babel src --source-maps --out-dir lib --extensions '.js,.ts' --plugins=@babel/plugin-transform-modules-commonjs",
     "test": "jest --coverage",
