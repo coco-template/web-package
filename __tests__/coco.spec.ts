@@ -10,6 +10,6 @@ describe('web package', () => {
   });
 
   it('should test compile result', () => {
-    expect(arrow('love')).toEqual(`Let's search love!!!`);
+    expect(arrow('love')).toEqual("Let's search love!!!");
   });
 });

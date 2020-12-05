@@ -71,5 +71,5 @@ build
 /lib
 /es
 /bundle
-/native
+/types
 .awcache
